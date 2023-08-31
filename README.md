@@ -1,3 +1,7 @@
+Ref : https://github.com/lgs96/NetworkEmulator
+
+I have copied this code because I don't have permission to push
+
 # Network Condition Manipulation with Python and Netem
 
 This repository contains a Python script to manipulate network conditions based on bandwidth and latency values stored in a CSV file. It uses the `tc` and `netem` Linux tools to change the conditions every 100 milliseconds.
