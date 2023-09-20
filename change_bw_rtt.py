@@ -15,7 +15,10 @@ def main():
     args = parser.parse_args()
     bandwidth=args.BW
     latency=args.latency
-    cmd = f'sudo tc qdisc replace dev ifb0 root netem rate {bandwidth}mbit delay {latency}ms'
+    if args.interface=='WiFi0':
+        cmd = f'sudo tc qdisc replace dev ifb0 root netem rate {bandwidth}mbit delay {latency}ms'
+    else:
+        cmd = f'sudo tc qdisc replace dev ifb1 root netem rate {bandwidth}mbit delay {latency}ms'
     subprocess.run(cmd, shell=True, check=True)
 
     
