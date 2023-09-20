@@ -19,7 +19,7 @@ def main():
         cmd = f'sudo tc qdisc replace dev ifb0 root netem rate {bandwidth}mbit delay {latency}ms'
     else:
         cmd = f'sudo tc qdisc replace dev ifb1 root netem rate {bandwidth}mbit delay {latency}ms'
-    perror(cmd)
+    print(cmd)
     subprocess.run(cmd, shell=True, check=True)
 
     
