@@ -35,7 +35,7 @@ sudo python3 emulation.py --interface <interface_name> --file <path_to_your_csv_
 To run the change_bw_rtt.py, use the following command:
 
 ```bash
-sudo python3 change_bw_rtt.py --interface <interface_name> --BW <BW_Mbits> --latency <delay_latency_value>
+sudo python3 change_bw_rtt.py --interface <interface_name> --BW <BW_Mbits> --latency <delay_latency_value_ms>
 ```
 
 
