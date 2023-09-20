@@ -32,6 +32,13 @@ To run the emulation, use the following command:
 sudo python3 emulation.py --interface <interface_name> --file <path_to_your_csv_file> --direction <uplink_or_downlink>
 ```
 
+To run the change_bw_rtt.py, use the following command:
+
+```bash
+sudo python3 change_bw_rtt.py --interface <interface_name> --BW <BW_Mbits> --latency <delay_latency_value>
+```
+
+
 To reset the emulation setting:
 
 ```bash
