@@ -12,7 +12,7 @@ def main():
     latency = args.latency
 
     # Directly apply to the interface for outbound control
-    cmd = f'sudo tc qdisc replace dev {args.interface} root netem rate {bandwidth}mbit delay {latency}ms'
+    cmd = f'sudo tc qdisc replace dev {args.interface} root netem rate {bandwidth}mbit delay {latency}ms limit 800' #실험을 통해서 cellular buffer size가 1500Bytes * 800이라는 걸 알아내서 이렇게 시도!
 
     print(cmd)
     subprocess.run(cmd, shell=True, check=True)
