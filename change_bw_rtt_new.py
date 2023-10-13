@@ -21,10 +21,10 @@ def main():
     cmd1=f'sudo tc qdisc add dev {args.interface} root handle 1: htb default 10'
 
 # Create a class under HTB for rate limiting
-    cmd2=f'sudo tc class add dev {args.interface} parent 1: classid 1:10 htb rate {bandwidth}'
+    cmd2=f'sudo tc class add dev {args.interface} parent 1: classid 1:10 htb rate {bandwidth}mbit'
 
 # Add netem qdisc under the class to introduce delay
-    cmd3=f'sudo tc qdisc add dev {args.interface} parent 1:10 handle 10: netem delay {latency}'
+    cmd3=f'sudo tc qdisc add dev {args.interface} parent 1:10 handle 10: netem delay {latency}ms'
 
 # Attach bfifo qdisc for byte-based buffer limiting
     cmd4=f'sudo tc qdisc add dev {args.interface} parent 10: bfifo limit {BUFFER_LIMIT}'
