@@ -32,6 +32,6 @@ def main():
     #args = parser.parse_args()
 
     #change_network_conditions_from_csv(args.file)
-    change_network_conditions_from_csv(ecf_test.csv)
+    change_network_conditions_from_csv('ecf_test.csv')
 if __name__ == "__main__":
     main()
