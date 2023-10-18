@@ -28,10 +28,10 @@ def change_network_conditions_from_csv(file):
 
 def main():
     parser = argparse.ArgumentParser(description='Change network conditions for outbound traffic on both WiFi0 and WiFi1 interfaces.')
-    parser.add_argument('--file', type=str, help='The CSV file to read network conditions from.')
-    args = parser.parse_args()
+    #parser.add_argument('--file', type=str, help='The CSV file to read network conditions from.')
+    #args = parser.parse_args()
 
-    change_network_conditions_from_csv(args.file)
-
+    #change_network_conditions_from_csv(args.file)
+    change_network_conditions_from_csv(./ecf_test.csv)
 if __name__ == "__main__":
     main()
